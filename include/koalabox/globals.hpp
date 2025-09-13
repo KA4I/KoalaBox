@@ -1,6 +1,9 @@
 #pragma once
 
 #include <string>
+#ifdef _WIN32
+#include <Windows.h>
+#endif
 
 namespace koalabox::globals {
     /**

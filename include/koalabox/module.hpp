@@ -2,6 +2,10 @@
 
 #include <filesystem>
 #include <set>
+#include <optional>
+#ifdef _WIN32
+#include <Windows.h> // For TCHAR, HMODULE
+#endif
 
 #define KB_MOD_GET_FUNC(MODULE, PROC_NAME) \
     koalabox::module::get_function(MODULE, #PROC_NAME, PROC_NAME)
@@ -9,10 +13,10 @@
 /// Cross-platform abstraction over dynamic libraries (.DLL / .SO files)
 namespace koalabox::module {
     // TODO: Refactor into an enum
-    constexpr auto CONST_STR_SECTION = ".rodata";
 #ifdef _WIN32
     constexpr auto CONST_STR_SECTION = ".rdata";
 #else
+    constexpr auto CONST_STR_SECTION = ".rodata";
     constexpr auto CODE_SECTION = ".text";
 #endif
 

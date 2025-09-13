@@ -3,6 +3,9 @@
 #include <functional>
 #include <map>
 #include <string>
+#ifdef _WIN32
+#include <Windows.h>
+#endif
 
 /**
  * DLL Monitor starts listening to DLL load events and invoked corresponding callbacks when target DLL is loaded.

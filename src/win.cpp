@@ -1,6 +1,5 @@
-#include <utf8.h>
-#include <wil/stl.h>
-#include <wil/win32_helpers.h>
+#include <fmt/format.h>
+#include <Windows.h>
 
 #include "koalabox/win.hpp"
 #include "koalabox/logger.hpp"
@@ -130,8 +129,12 @@ namespace koalabox::win {
     }
 
     fs::path get_module_path(const HMODULE& handle) {
-        const auto wstr_path = wil::GetModuleFileNameW<std::wstring>(handle);
-        return path::from_wstr(wstr_path);
+        WCHAR buffer[MAX_PATH];
+        const auto size = GetModuleFileNameW(handle, buffer, MAX_PATH);
+        if(size == 0) {
+            throw std::runtime_error(std::format("GetModuleFileNameW failed. Error: {}", get_last_error()));
+        }
+        return path::from_wstr(buffer);
     }
 
     HMODULE get_module_handle_or_throw(const std::string& module_name) {

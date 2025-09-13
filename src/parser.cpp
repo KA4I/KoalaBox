@@ -1,7 +1,9 @@
-#include <deque>
+﻿#include <deque>
 
 #include "koalabox/logger.hpp"
 #include "koalabox/parser.hpp"
+
+#if KOALABOX_PARSER
 
 extern "C" const TSLanguage* tree_sitter_cpp();
 
@@ -103,3 +105,5 @@ namespace koalabox::parser {
         }
     }
 }
+
+#endif // KOALABOX_PARSER

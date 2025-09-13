@@ -15,5 +15,6 @@ namespace koalabox::path {
     fs::path from_str(const std::string& str);
     std::wstring to_wstr(const fs::path& path);
     std::string to_str(const fs::path& path);
+    // Returns platform-specific koalabox::string (wstring on Windows, string otherwise)
     string to_kb_str(const fs::path& path);
 }

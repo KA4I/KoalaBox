@@ -1,6 +1,12 @@
 #pragma once
 
 #include <filesystem>
+#include <optional>
+#include <string>
+#ifdef _WIN32
+#include <Windows.h>
+#include <Psapi.h>
+#endif
 
 #define KB_WIN_GET_PROC(MODULE, PROC_NAME) \
     koalabox::win::get_proc(MODULE, #PROC_NAME, PROC_NAME)

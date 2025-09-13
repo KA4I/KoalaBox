@@ -3,6 +3,10 @@
 // Source: https://github.com/blaquee/dllnotif/blob/master/LdrDllNotification/ntapi.h
 
 // @formatter:off
+#ifdef _WIN32
+#include <Windows.h>
+#include <winternl.h>
+#endif
 typedef __success(return >= 0) LONG NTSTATUS;
 
 #ifndef NT_STATUS_OK
@@ -24,12 +28,20 @@ enum LDR_DLL_NOTIFICATION_REASON
 	LDR_DLL_NOTIFICATION_REASON_UNLOADED = 2,
 };
 
+#ifndef KOALABOX_UNICODE_STRING_DEFINED
+#define KOALABOX_UNICODE_STRING_DEFINED
+// If Windows headers already declared UNICODE_STRING, skip our custom struct
+#if !defined(UNICODE_STRING) && !defined(_WINNT_) && !defined(_SUBAUTH_H)
 typedef struct tag_UNICODE_STRING {
-	USHORT Length;
-	USHORT MaximumLength;
-	PWSTR  Buffer;
+    USHORT Length;
+    USHORT MaximumLength;
+    PWSTR  Buffer;
 } __UNICODE_STRING, *PUNICODE_STRING, *PCUNICODE_STRING;
+#endif
+#endif
 
+#ifndef KOALABOX_LDR_NOTIFICATION_DEFINED
+#define KOALABOX_LDR_NOTIFICATION_DEFINED
 typedef struct _LDR_DLL_LOADED_NOTIFICATION_DATA {
 	ULONG Flags;                    //Reserved.
 	PCUNICODE_STRING FullDllName;   //The full path name of the DLL module.
@@ -69,5 +81,6 @@ typedef NTSTATUS (NTAPI *_LdrRegisterDllNotification)(
 typedef NTSTATUS (NTAPI *_LdrUnregisterDllNotification)(
 	_In_ PVOID Cookie
 );
+#endif // KOALABOX_LDR_NOTIFICATION_DEFINED
 
 // @formatter:on

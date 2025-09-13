@@ -1,10 +1,15 @@
+// Standard library
 #include <regex>
+#include <format>
 
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/sinks/stdout_sinks.h>
 
 #include "koalabox/logger.hpp"
 #include "koalabox/path.hpp"
+#ifdef _WIN32
+#include <Windows.h>
+#endif
 
 namespace {
     std::string get_logger_pattern() {
@@ -77,7 +82,7 @@ namespace koalabox::logger {
     void init_file_logger(const fs::path& log_path) {
         fs::create_directories(log_path.parent_path());
 
-        const auto logger = spdlog::basic_logger_mt("file", path::to_kb_str(log_path), true);
+    const auto logger = spdlog::basic_logger_mt("file", path::to_str(log_path), true);
         configure_logger(logger);
     }
 

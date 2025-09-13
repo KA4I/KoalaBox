@@ -1,5 +1,10 @@
+#include <Windows.h>
+#include <format>
+
 #include "koalabox/globals.hpp"
 #include "koalabox/logger.hpp"
+#include "koalabox/str.hpp"
+#include "koalabox/win.hpp"
 #include "koalabox/util.hpp"
 
 namespace koalabox::util {

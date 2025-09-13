@@ -1,3 +1,5 @@
+// Generic (non-Windows) implementations. On Windows these are provided by module_win.cpp
+#ifndef _WIN32
 #include "koalabox/module.hpp"
 #include "koalabox/koalabox.hpp"
 #include "koalabox/path.hpp"
@@ -24,3 +26,4 @@ namespace koalabox::module {
                );
     }
 }
+#endif

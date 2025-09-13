@@ -1,6 +1,10 @@
 #pragma once
 
 #include <string>
+#include <cstdint>
+#ifdef _WIN32
+#include <Windows.h>
+#endif
 
 #define KB_HOOK_GET_HOOKED_FN(FUNC) koalabox::hook::get_hooked_function(#FUNC, FUNC)
 #define KB_HOOK_GET_SWAPPED_FN(CLASS, FUNC) koalabox::hook::get_swapped_function(CLASS, #FUNC, FUNC)

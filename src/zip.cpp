@@ -4,12 +4,19 @@
 #include <ios>
 #include <string>
 
-#include <miniz.h>
+// Determine availability of miniz
+#if KOALABOX_ZIP && __has_include(<miniz.h>)
+    #include <miniz.h>
+#else
+    #undef KOALABOX_ZIP
+    #define KOALABOX_ZIP 0
+#endif
 
 #include "koalabox/path.hpp"
 #include "koalabox/zip.hpp"
 
 namespace koalabox::zip {
+#if KOALABOX_ZIP
     void extract_files(
         const fs::path& zip_path,
         const std::function<fs::path(const std::string& name, bool is_dir)>& predicate
@@ -119,4 +126,14 @@ namespace koalabox::zip {
             throw;
         }
     }
-}
+    } // extract_files
+#else
+    // Stub to aid linkage when feature disabled
+    void extract_files(
+        const fs::path& /*zip_path*/,
+        const std::function<fs::path(const std::string& name, bool is_dir)>& /*predicate*/
+    ) {
+        throw std::runtime_error("KOALABOX_ZIP feature disabled (miniz not available)");
+    }
+#endif // KOALABOX_ZIP
+} // namespace koalabox::zip
