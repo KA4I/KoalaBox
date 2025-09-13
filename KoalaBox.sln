@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.34700.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KoalaBox", "KoalaBox.vcxproj", "{A1E4C2B4-8E16-4A2D-9A15-6C3B9D4C5F10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1E4C2B4-8E16-4A2D-9A15-6C3B9D4C5F10}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A1E4C2B4-8E16-4A2D-9A15-6C3B9D4C5F10}.Debug|Win32.Build.0 = Debug|Win32
+		{A1E4C2B4-8E16-4A2D-9A15-6C3B9D4C5F10}.Debug|x64.ActiveCfg = Debug|x64
+		{A1E4C2B4-8E16-4A2D-9A15-6C3B9D4C5F10}.Debug|x64.Build.0 = Debug|x64
+		{A1E4C2B4-8E16-4A2D-9A15-6C3B9D4C5F10}.Release|Win32.ActiveCfg = Release|Win32
+		{A1E4C2B4-8E16-4A2D-9A15-6C3B9D4C5F10}.Release|Win32.Build.0 = Release|Win32
+		{A1E4C2B4-8E16-4A2D-9A15-6C3B9D4C5F10}.Release|x64.ActiveCfg = Release|x64
+		{A1E4C2B4-8E16-4A2D-9A15-6C3B9D4C5F10}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9588E2E7-5F2A-4D68-9003-A1A47D5A9B22}
+	EndGlobalSection
+EndGlobal

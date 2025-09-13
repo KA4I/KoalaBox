@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <EnableParallelCompilation>true</EnableParallelCompilation>
+    <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    <UseMultiToolTask>true</UseMultiToolTask>
+    <WarningLevel>Level3</WarningLevel>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <CharacterSet>Unicode</CharacterSet>
+    <C_CppLanguageStandard>stdcpp20</C_CppLanguageStandard>
+  </PropertyGroup>
+</Project>

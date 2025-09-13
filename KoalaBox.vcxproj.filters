@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7D4BBAE1-7F7E-4F6F-9D0E-77FA2B9B0101}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9C1EC860-1343-45D6-9F2F-0F8D6B3C0202}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows Specific">
+      <UniqueIdentifier>{A2B9F2F1-2A3A-4F4A-8E44-ACD3B4E30303}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\koalabox\cache.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\config.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\crypto.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\dll_monitor.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\globals.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\hook.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\http_client.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\io.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\ipc.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\koalabox.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\loader.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\logger.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\module.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\parser.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\patcher.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\path.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\paths.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\str.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\util.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\zip.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\koalabox\win.hpp" >
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\cache.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crypto.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\globals.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logger.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hook.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\http_client.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\io.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\loader.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\module.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\parser.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\patcher.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\path.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\paths.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\str.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zip.cpp" >
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dll_monitor_win.cpp" >
+      <Filter>Windows Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ipc_win.cpp" >
+      <Filter>Windows Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="src\loader_win.cpp" >
+      <Filter>Windows Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="src\module_win.cpp" >
+      <Filter>Windows Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="src\path_win.cpp" >
+      <Filter>Windows Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="src\paths_win.cpp" >
+      <Filter>Windows Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="src\str_win.cpp" >
+      <Filter>Windows Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util_win.cpp" >
+      <Filter>Windows Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win.cpp" >
+      <Filter>Windows Specific</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
